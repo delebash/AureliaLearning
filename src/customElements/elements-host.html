@@ -1,0 +1,32 @@
+<template>
+  <!--HtmlOny-->
+  <!--<require from="./htmlonly.html"></require>-->
+  <!--<htmlonly first-name="Albert" last-name="Einstein"></htmlonly>-->
+
+  <!--HtmlOny two-way binding-->
+  <!--<require from="./twowaybindinghtmlonly.html"></require>-->
+  <!--Hello, ${guest}!-->
+  <!--<twowaybindinghtmlonly name.two-way="guest"></twowaybindinghtmlonly>-->
+
+  <!--Custom Element-->
+    <!--<require from="./secret-message"></require>-->
+
+    <!--And now, it's time for a secret message: <secret-message></secret-message>-->
+
+<!--Explicitly Named-->
+  <!--<require from="./my-explicit"></require>-->
+
+  <!--And now, it's time for a secret message: <explicitlynamed></explicitlynamed>-->
+
+  <!--Bindable Properties-->
+
+  <require from="./bindable-properties"></require>
+
+  <p>
+    Secret Message: <input type="text" value.bind="message" />
+  </p>
+  <p>
+    Allow Message to Destruct? <input type="checkbox" checked.bind="allowDestruction" />
+  </p>
+  <bindable-properties message.bind="message" allow-destruction.bind="allowDestruction" ></bindable-properties>
+</template>

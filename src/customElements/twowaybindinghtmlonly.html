@@ -1,0 +1,8 @@
+<template bindable="name">
+  <require from="./yes-or-no.html"></require>
+  <require from="./say-goodbye.html"></require>
+
+  <p>What is your name? <input type="text" value.bind="name & debounce" /></p>
+  <yes-or-no question="Are you leaving?" answer.two-way="sayGoodbye"></yes-or-no>
+  <say-goodbye if.bind="sayGoodbye" name.bind="name"></say-goodbye>
+</template>
